@@ -1,61 +1,9 @@
-import Image from "next/image";
+import { Header } from "./components/Header";
 
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col bg-white font-sans text-zinc-950 dark:bg-black dark:text-zinc-50">
-      {/* Header */}
-      <header className="sticky top-0 z-20 border-b border-black/[.08] bg-white/80 backdrop-blur-md dark:border-white/[.12] dark:bg-black/80">
-        <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
-          <div className="flex items-center gap-8">
-            <a href="#" className="flex items-center">
-              <Image
-                className="h-5 w-[100px] dark:invert"
-                src="/next.svg"
-                alt="Logo"
-                width={100}
-                height={20}
-                priority
-              />
-            </a>
-
-            <nav className="hidden items-center gap-6 text-sm text-zinc-600 dark:text-zinc-400 md:flex">
-              <a
-                href="#features"
-                className="transition-colors hover:text-black dark:hover:text-white"
-              >
-                Возможности
-              </a>
-              <a
-                href="#architecture"
-                className="transition-colors hover:text-black dark:hover:text-white"
-              >
-                Архитектура
-              </a>
-              <a
-                href="#docs"
-                className="transition-colors hover:text-black dark:hover:text-white"
-              >
-                Документация
-              </a>
-            </nav>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <a
-              href="#contact"
-              className="hidden h-9 items-center justify-center rounded-md border border-black/[.08] px-3.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-white/[.14] dark:hover:bg-zinc-900 sm:inline-flex"
-            >
-              Связаться
-            </a>
-            <a
-              href="#start"
-              className="inline-flex h-9 items-center justify-center rounded-md bg-black px-4 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-            >
-              Начать
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Main */}
       <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-6">
@@ -93,14 +41,14 @@ export default function Home() {
               </text>
             </svg>
 
-            <h1 className="relative z-10 -mt-10 text-4xl font-bold tracking-tight text-black [text-shadow:0_-12px_28px_rgba(255,255,255,0.95),0_-4px_12px_rgba(255,255,255,1)] dark:text-white dark:[text-shadow:0_-12px_32px_rgba(0,0,0,1),0_-4px_14px_rgba(0,0,0,0.95)] sm:-mt-14 sm:text-6xl">
+            <h1 className="relative z-10 -mt-10 text-4xl font-bold tracking-tight text-black [text-shadow:0_-20px_48px_rgba(255,255,255,1),0_-10px_24px_rgba(255,255,255,1),0_-4px_10px_rgba(255,255,255,1)] dark:text-white dark:[text-shadow:0_-22px_54px_rgba(0,0,0,1),0_-12px_28px_rgba(0,0,0,1),0_-4px_12px_rgba(0,0,0,1)] sm:-mt-14 sm:text-6xl">
               digital agency
             </h1>
           </div>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-xl sm:leading-8">
-            Чистая архитектура, мгновенная загрузка со статического CDN и
-            аккуратный дизайн, вдохновлённый лучшими инженерными практиками.
+            Clean architecture, instant delivery from a global static CDN, and
+            refined design inspired by modern engineering.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
@@ -108,60 +56,109 @@ export default function Home() {
               href="#features"
               className="inline-flex h-12 w-full items-center justify-center rounded-full bg-black px-7 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 sm:w-auto"
             >
-              Начать работу
+              Get Started
             </a>
             <a
               href="#architecture"
               className="inline-flex h-12 w-full items-center justify-center rounded-full border border-black/[.1] bg-white px-7 text-sm font-medium transition-colors hover:bg-zinc-50 dark:border-white/[.15] dark:bg-black dark:hover:bg-zinc-900 sm:w-auto"
             >
-              Узнать больше
+              Learn More
             </a>
           </div>
         </section>
 
         {/* Feature Grid */}
-        <section
-          id="features"
-          className="grid gap-px overflow-hidden rounded-2xl border border-black/[.08] bg-black/[.08] dark:border-white/[.12] dark:bg-white/[.12] sm:grid-cols-3"
-        >
-          <div className="flex flex-col justify-between bg-white p-8 dark:bg-black">
+        <section id="features" className="grid gap-6 sm:grid-cols-3">
+          <a
+            href="#speed"
+            className="group flex min-h-[210px] flex-col justify-between rounded-xl border border-black/[.08] bg-white p-6 transition-colors hover:border-black/25 dark:border-white/[.12] dark:bg-black dark:hover:border-white/25"
+          >
+            <svg
+              className="h-7 w-7 text-black dark:text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
             <div>
-              <span className="font-mono text-xs text-zinc-500">01 / SPEED</span>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight">
-                Мгновенный отклик
+              <h2 className="flex items-center gap-1.5 text-base font-semibold tracking-tight text-black dark:text-white">
+                Instant Response
+                <span className="transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
               </h2>
               <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-                Статическая генерация и доставка контента через глобальную сеть
-                Cloudflare без лишних задержек.
+                Static generation and content delivery via Cloudflare&apos;s
+                global edge network with zero overhead.
               </p>
             </div>
-          </div>
+          </a>
 
-          <div className="flex flex-col justify-between bg-white p-8 dark:bg-black">
+          <a
+            href="#design"
+            className="group flex min-h-[210px] flex-col justify-between rounded-xl border border-black/[.08] bg-white p-6 transition-colors hover:border-black/25 dark:border-white/[.12] dark:bg-black dark:hover:border-white/25"
+          >
+            <svg
+              className="h-7 w-7 text-black dark:text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <path d="M9 3v18" />
+              <path d="M3 9h18" />
+            </svg>
             <div>
-              <span className="font-mono text-xs text-zinc-500">02 / DESIGN</span>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight">
-                Инженерная эстетика
+              <h2 className="flex items-center gap-1.5 text-base font-semibold tracking-tight text-black dark:text-white">
+                Engineering Aesthetic
+                <span className="transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
               </h2>
               <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-                Тонкие границы, моноширинные акценты, сетка и сбалансированный
-                контраст в светлой и тёмной темах.
+                Crisp borders, balanced contrast, and refined typography across
+                light and dark themes.
               </p>
             </div>
-          </div>
+          </a>
 
-          <div className="flex flex-col justify-between bg-white p-8 dark:bg-black">
+          <a
+            href="#scale"
+            className="group flex min-h-[210px] flex-col justify-between rounded-xl border border-black/[.08] bg-white p-6 transition-colors hover:border-black/25 dark:border-white/[.12] dark:bg-black dark:hover:border-white/25"
+          >
+            <svg
+              className="h-7 w-7 text-black dark:text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
             <div>
-              <span className="font-mono text-xs text-zinc-500">03 / SCALE</span>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight">
-                Готов к росту
+              <h2 className="flex items-center gap-1.5 text-base font-semibold tracking-tight text-black dark:text-white">
+                Built to Scale
+                <span className="transition-transform group-hover:translate-x-0.5">
+                  →
+                </span>
               </h2>
               <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-                Легко расширяется новыми страницами, формами, анимациями и
-                интеграциями по мере развития проекта.
+                Easily extensible with new pages, interactive components, and
+                API integrations as your project grows.
               </p>
             </div>
-          </div>
+          </a>
         </section>
 
         <div className="h-24" />
@@ -171,13 +168,9 @@ export default function Home() {
       <footer className="relative z-10 border-t border-black/[.08] bg-white dark:border-white/[.12] dark:bg-black">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 text-sm text-zinc-600 dark:text-zinc-400 sm:flex-row">
           <div className="flex items-center gap-3">
-            <Image
-              className="h-4 w-[80px] dark:invert"
-              src="/next.svg"
-              alt="Logo"
-              width={80}
-              height={16}
-            />
+            <span className="text-xl font-bold tracking-tight text-black dark:text-white">
+              richcorp
+            </span>
             <span>© {new Date().getFullYear()}</span>
           </div>
 
@@ -186,19 +179,19 @@ export default function Home() {
               href="#features"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
-              Возможности
+              Features
             </a>
             <a
               href="#architecture"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
-              Архитектура
+              Architecture
             </a>
             <a
               href="#docs"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
-              Документация
+              Docs
             </a>
           </div>
         </div>
