@@ -24,3 +24,126 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 3D Rotating Book Cards (nextjs.org/learn style) */
+:root {
+  --book-color: #e4e4e7;
+  --book-text: #18181b;
+  --book-subtitle: #52525b;
+  --book-pages-bg: #ffffff;
+  --book-pages-edge: #d4d4d8;
+  --book-pages-tint: #f4f4f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --book-color: #27272a;
+    --book-text: #fafafa;
+    --book-subtitle: #a1a1aa;
+    --book-pages-bg: #0a0a0a;
+    --book-pages-edge: #3f3f46;
+    --book-pages-tint: #18181b;
+  }
+}
+
+.bookPerspective {
+  perspective: 900px;
+}
+
+.bookRotateWrapper {
+  cursor: pointer;
+  --book-height: 220px;
+  --book-width: 204px;
+  --book-depth: 56px;
+  --book-border-radius: 5.4px 1.8px 1.8px 5.4px;
+  --hover-rotate: -20deg;
+  --hover-scale: 1.066;
+  --hover-translate-x: -0.5em;
+  transform-style: preserve-3d;
+  width: var(--book-width);
+  height: var(--book-height);
+  box-shadow: none;
+  transition: transform 0.6s;
+  position: relative;
+  transform: rotate(0);
+}
+
+.bookRotateWrapper:hover {
+  transform: rotateY(var(--hover-rotate)) scale(var(--hover-scale))
+    translateX(var(--hover-translate-x));
+}
+
+.bookRotateWrapper > :first-child {
+  width: var(--book-width);
+  height: var(--book-height);
+  position: absolute;
+}
+
+.book {
+  width: var(--book-width);
+  height: var(--book-height);
+  min-width: var(--book-width);
+  min-height: var(--book-height);
+  border-radius: var(--book-border-radius);
+  background: linear-gradient(180deg, #ffffff1a 0%, #fff0 50%, #fff0 100%),
+    var(--book-color);
+  box-shadow:
+    0 1.8px 3.6px #0000000d,
+    0 10.8px 21.6px #00000014,
+    inset 0 -0.9px #0000001a,
+    inset 0 1.8px 1.8px #ffffff1a,
+    inset 3.6px 0 3.6px #0000001a;
+}
+
+.bookBind {
+  opacity: 0.2;
+  background:
+    linear-gradient(
+      90deg,
+      #fff0 0% 12%,
+      #ffffff40 29.25%,
+      #fff0 50.5% 75.25%,
+      #ffffff40 91%,
+      #fff0 100%
+    ),
+    linear-gradient(
+      90deg,
+      #00000008 0%,
+      #0000001a 12%,
+      #0000 30%,
+      #00000005 50%,
+      #0003 73.5%,
+      #00000080 75.25%,
+      #00000026 85.25%,
+      #0000 100%
+    );
+  width: 24px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.bookCover {
+  padding: 1.5rem 1.25rem;
+}
+
+.bookSide {
+  background:
+    linear-gradient(90deg, var(--book-pages-edge) 0%, transparent 30%),
+    linear-gradient(var(--book-pages-bg), var(--book-pages-tint));
+  height: calc(var(--book-height) - 2 * 3px);
+  width: calc(var(--book-depth) - 2px);
+  transform: translateX(calc(var(--book-width) - var(--book-depth) / 2 - 3px))
+    rotateY(90deg) translateX(calc(var(--book-depth) / 2));
+  position: absolute;
+  top: 3px;
+}
+
+.bookBack {
+  width: var(--book-width);
+  height: var(--book-height);
+  border-radius: var(--book-border-radius);
+  background: var(--book-color);
+  transform: translateZ(calc(-1 * var(--book-depth)));
+  position: absolute;
+  left: 0;
+}

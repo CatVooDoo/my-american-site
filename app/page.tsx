@@ -161,6 +161,68 @@ export default function Home() {
           </a>
         </section>
 
+        {/* Case Studies (3D Rotating Book Cards - nextjs.org/learn style) */}
+        <section id="cases" className="mt-24">
+          <div className="mb-10 flex flex-col gap-2">
+            <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white sm:text-3xl">
+              Selected Cases
+            </h2>
+            <p className="max-w-xl text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
+              Explore how we design, engineer, and ship high-performance digital
+              products.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-8 py-8 sm:justify-between">
+            {[
+              {
+                href: "#case-1",
+                title: "Demo",
+                category: "Case 01",
+              },
+              {
+                href: "#case-2",
+                title: "Demo",
+                category: "Case 02",
+              },
+              {
+                href: "#case-3",
+                title: "Demo",
+                category: "Case 03",
+              },
+              {
+                href: "#case-4",
+                title: "Demo",
+                category: "Case 04",
+              },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="bookPerspective"
+              >
+                <div className="bookRotateWrapper">
+                  <div className="book flex flex-row items-stretch justify-start">
+                    <div className="bookBind" />
+                    <div className="bookCover flex flex-1 flex-col items-stretch justify-between">
+                      <div className="space-y-2">
+                        <p className="text-[15px] font-medium leading-[22px] tracking-[-0.01em] text-[var(--book-text)]">
+                          {item.title}
+                        </p>
+                        <p className="text-[13px] leading-[18px] text-[var(--book-subtitle)]">
+                          {item.category}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bookSide" />
+                  <div className="bookBack" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <div className="h-24" />
       </main>
 
