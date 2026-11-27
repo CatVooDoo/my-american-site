@@ -33,10 +33,11 @@ export default function Home() {
                 x="50%"
                 y="150"
                 textAnchor="middle"
-                fill="transparent"
                 stroke="url(#richcorp-stroke)"
-                strokeWidth="2.5"
-                className="font-sans text-[150px] font-bold tracking-[0.14em]"
+                strokeWidth="4.5"
+                strokeLinejoin="round"
+                paintOrder="stroke"
+                className="fill-white font-sans text-[150px] font-bold tracking-[0.14em] dark:fill-black"
               >
                 RICHCORP
               </text>
