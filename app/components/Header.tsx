@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export function Header() {
@@ -22,48 +23,48 @@ export function Header() {
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
         <div className="flex items-center gap-8">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="flex items-center text-2xl font-bold leading-none tracking-tight text-black dark:text-white"
           >
             richcorp
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-6 text-sm leading-none text-zinc-600 dark:text-zinc-400 md:flex">
-            <a
-              href="#features"
+            <Link
+              href="/features"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
               Features
-            </a>
-            <a
-              href="#architecture"
+            </Link>
+            <Link
+              href="/architecture"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
               Architecture
-            </a>
-            <a
-              href="#docs"
+            </Link>
+            <Link
+              href="/docs"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
               Docs
-            </a>
+            </Link>
           </nav>
         </div>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="hidden h-9 items-center justify-center rounded-md border border-black/[.08] px-3.5 text-sm font-medium transition-colors hover:bg-zinc-100 dark:border-white/[.14] dark:hover:bg-zinc-900 sm:inline-flex"
           >
             Contact
-          </a>
-          <a
-            href="#start"
+          </Link>
+          <Link
+            href="/get-started"
             className="inline-flex h-9 items-center justify-center rounded-md bg-black px-4 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </header>
