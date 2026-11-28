@@ -2,36 +2,36 @@ import type { Metadata } from "next";
 import { TemplatePage } from "../components/TemplatePage";
 
 export const metadata: Metadata = {
-  title: "Docs — richcorp",
-  description: "Documentation and guides for richcorp.",
+  title: "About — richcorp",
+  description: "About Richcorp, a two-person web design and AI automation studio.",
 };
 
 export default function DocsPage() {
   return (
     <TemplatePage
-      badge="Documentation"
-      title="Docs"
-      subtitle="Template documentation page for guides, API references, and project conventions."
+      badge="About"
+      title="About Richcorp"
+      subtitle="A two-person boutique web design and AI automation studio focused on measurable business outcomes."
       blocks={[
         {
-          title: "Getting Started",
+          title: "Design Meets Automation",
           description:
-            "Step-by-step setup instructions, environment configuration, and local development workflow.",
+            "We pair senior UI/web design with full-stack AI automation so your site looks sharp and actively books calls.",
         },
         {
-          title: "Components & UI",
+          title: "Built for Speed",
           description:
-            "Reusable layout primitives, navigation patterns, and theme guidelines.",
+            "Every inquiry is answered and qualified in seconds—even after hours—so warm prospects never go cold.",
         },
         {
-          title: "Deployment",
+          title: "Transparent Pricing",
           description:
-            "Build verification, static asset optimization, and edge deployment checklist.",
+            "Projects start from $1,500 with clear scope, fixed timelines, and zero bloated agency retainers.",
         },
         {
-          title: "Changelog",
+          title: "Practical AI Only",
           description:
-            "Recent updates, structural improvements, and release notes.",
+            "No gimmicks—just reliable chat assistants, lead qualification, and calendar/CRM workflows that save hours every week.",
         },
       ]}
     />

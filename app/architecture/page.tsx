@@ -2,36 +2,36 @@ import type { Metadata } from "next";
 import { TemplatePage } from "../components/TemplatePage";
 
 export const metadata: Metadata = {
-  title: "Architecture — richcorp",
-  description: "Technical architecture behind richcorp digital products.",
+  title: "Process — richcorp",
+  description: "How richcorp takes your website and AI automations from discovery to launch.",
 };
 
 export default function ArchitecturePage() {
   return (
     <TemplatePage
-      badge="Architecture"
-      title="Architecture"
-      subtitle="Template page describing the technical stack, deployment pipeline, and edge infrastructure."
+      badge="Process"
+      title="How It Works"
+      subtitle="A straightforward, founder-led process from first call to launch."
       blocks={[
         {
-          title: "Next.js App Router",
+          title: "1. Discovery Call",
           description:
-            "Server-first rendering and static prerendering for predictable, fast page loads.",
+            "We review your current website, lead flow, and bottlenecks to map out the highest-impact design and AI automations.",
         },
         {
-          title: "Cloudflare Edge Runtime",
+          title: "2. Design & Build",
           description:
-            "Deployed via OpenNext for low-latency global distribution with zero cold-start overhead.",
+            "We design your custom site and configure your AI booking and CRM workflows—working directly with you at every milestone.",
         },
         {
-          title: "Type-Safe Foundation",
+          title: "3. Launch & Support",
           description:
-            "End-to-end TypeScript and strict linting to keep the codebase reliable as it grows.",
+            "We test every flow end-to-end, go live without disruption, and stay on hand to fine-tune performance as leads come in.",
         },
         {
-          title: "Utility-First Styling",
+          title: "Direct Founder Access",
           description:
-            "Tailwind CSS v4 tokens and responsive layouts across desktop and mobile viewports.",
+            "No account managers or handoffs—you work directly with the two-person studio building your system.",
         },
       ]}
     />

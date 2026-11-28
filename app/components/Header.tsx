@@ -32,22 +32,28 @@ export function Header() {
 
           <nav className="hidden items-center gap-6 text-sm leading-none text-zinc-600 dark:text-zinc-400 md:flex">
             <Link
+              href="/#cases"
+              className="transition-colors hover:text-black dark:hover:text-white"
+            >
+              Work
+            </Link>
+            <Link
               href="/features"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
-              Features
+              Services
             </Link>
             <Link
               href="/architecture"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
-              Architecture
+              Process
             </Link>
             <Link
               href="/docs"
               className="transition-colors hover:text-black dark:hover:text-white"
             >
-              Docs
+              About
             </Link>
           </nav>
         </div>
@@ -63,7 +69,7 @@ export function Header() {
             href="/get-started"
             className="inline-flex h-9 items-center justify-center rounded-md bg-black px-4 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
           >
-            Get Started
+            Book a Call
           </Link>
         </div>
       </div>

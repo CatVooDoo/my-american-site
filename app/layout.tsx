@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "richcorp — Site Construction",
-  description: "richcorp digital agency — site under construction",
+  title: "richcorp — Web Design & AI Automation Studio",
+  description:
+    "Custom high-converting websites paired with 24/7 AI lead-capture and booking automations for growing businesses.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

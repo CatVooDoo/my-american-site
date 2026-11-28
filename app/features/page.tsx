@@ -2,36 +2,37 @@ import type { Metadata } from "next";
 import { TemplatePage } from "../components/TemplatePage";
 
 export const metadata: Metadata = {
-  title: "Features — richcorp",
-  description: "Overview of richcorp platform and engineering features.",
+  title: "Services — richcorp",
+  description:
+    "Custom web design, 24/7 AI lead agents, and workflow automation for growing businesses.",
 };
 
 export default function FeaturesPage() {
   return (
     <TemplatePage
-      badge="Features"
-      title="Features"
-      subtitle="Template page for richcorp core capabilities, edge performance, and engineering standards."
+      badge="Services"
+      title="What We Build"
+      subtitle="Everything you need to look credible online, respond to leads in seconds, and keep your calendar full."
       blocks={[
         {
-          title: "Instant Edge Delivery",
+          title: "Custom Web Design",
           description:
-            "Static generation and global CDN caching for sub-second response times worldwide.",
+            "Conversion-focused websites tailored to your brand, built for clarity, trust, and effortless mobile browsing.",
         },
         {
-          title: "Minimalist Design System",
+          title: "AI Lead & Chat Agents",
           description:
-            "Crisp borders, balanced contrast, and adaptive light and dark themes.",
+            "24/7 AI assistants that answer visitor questions, qualify prospects in seconds, and book appointments directly onto your calendar.",
         },
         {
-          title: "Modular Architecture",
+          title: "Workflow & CRM Automation",
           description:
-            "Cleanly structured components ready to scale with new routes and integrations.",
+            "Automated follow-ups, instant lead routing, and seamless CRM syncing that save your team hours of manual admin every week.",
         },
         {
-          title: "Built-in Analytics & Consent",
+          title: "Ongoing Optimization",
           description:
-            "Lightweight analytics integration paired with transparent cookie preferences.",
+            "Continuous refinements to your messaging, booking flows, and automations as your business scales.",
         },
       ]}
     />

@@ -19,19 +19,19 @@ export function Footer() {
             href="/features"
             className="transition-colors hover:text-black dark:hover:text-white"
           >
-            Features
+            Services
           </Link>
           <Link
             href="/architecture"
             className="transition-colors hover:text-black dark:hover:text-white"
           >
-            Architecture
+            Process
           </Link>
           <Link
             href="/docs"
             className="transition-colors hover:text-black dark:hover:text-white"
           >
-            Docs
+            About
           </Link>
           <span
             aria-hidden="true"

@@ -49,22 +49,24 @@ export default function Home() {
           </div>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-xl sm:leading-8">
-            Clean architecture, instant delivery from a global static CDN, and
-            refined design inspired by modern engineering.
+            Richcorp is a two-person studio building custom websites paired with
+            practical AI workflows for growing businesses. Capture and qualify
+            leads 24/7, book more calls automatically, and save hours of manual
+            work.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <a
-              href="#features"
+              href="/get-started"
               className="inline-flex h-12 w-full items-center justify-center rounded-full bg-black px-7 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 sm:w-auto"
             >
-              Get Started
+              Book a Free 15-Min Call
             </a>
             <a
-              href="#architecture"
+              href="#features"
               className="inline-flex h-12 w-full items-center justify-center rounded-full border border-black/[.1] bg-white px-7 text-sm font-medium transition-colors hover:bg-zinc-50 dark:border-white/[.15] dark:bg-black dark:hover:bg-zinc-900 sm:w-auto"
             >
-              Learn More
+              Explore Services
             </a>
           </div>
         </section>
@@ -72,7 +74,7 @@ export default function Home() {
         {/* Feature Grid */}
         <section id="features" className="grid gap-6 sm:grid-cols-3">
           <a
-            href="#speed"
+            href="/features"
             className="group flex min-h-[210px] flex-col justify-between rounded-xl border border-black/[.08] bg-white p-6 transition-colors hover:border-black/25 dark:border-white/[.12] dark:bg-black dark:hover:border-white/25"
           >
             <svg
@@ -88,20 +90,20 @@ export default function Home() {
             </svg>
             <div>
               <h2 className="flex items-center gap-1.5 text-base font-semibold tracking-tight text-black dark:text-white">
-                Instant Response
+                Custom Web Design
                 <span className="transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
               </h2>
               <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-                Static generation and content delivery via Cloudflare&apos;s
-                global edge network with zero overhead.
+                Conversion-focused websites tailored to your brand, built for
+                clarity, trust, and effortless mobile browsing.
               </p>
             </div>
           </a>
 
           <a
-            href="#design"
+            href="/features"
             className="group flex min-h-[210px] flex-col justify-between rounded-xl border border-black/[.08] bg-white p-6 transition-colors hover:border-black/25 dark:border-white/[.12] dark:bg-black dark:hover:border-white/25"
           >
             <svg
@@ -119,20 +121,20 @@ export default function Home() {
             </svg>
             <div>
               <h2 className="flex items-center gap-1.5 text-base font-semibold tracking-tight text-black dark:text-white">
-                Engineering Aesthetic
+                AI Lead &amp; Chat Agents
                 <span className="transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
               </h2>
               <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-                Crisp borders, balanced contrast, and refined typography across
-                light and dark themes.
+                24/7 AI assistants that answer visitor questions, qualify
+                prospects in seconds, and book appointments onto your calendar.
               </p>
             </div>
           </a>
 
           <a
-            href="#scale"
+            href="/features"
             className="group flex min-h-[210px] flex-col justify-between rounded-xl border border-black/[.08] bg-white p-6 transition-colors hover:border-black/25 dark:border-white/[.12] dark:bg-black dark:hover:border-white/25"
           >
             <svg
@@ -150,14 +152,14 @@ export default function Home() {
             </svg>
             <div>
               <h2 className="flex items-center gap-1.5 text-base font-semibold tracking-tight text-black dark:text-white">
-                Built to Scale
+                Workflow &amp; CRM Automation
                 <span className="transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
               </h2>
               <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-                Easily extensible with new pages, interactive components, and
-                API integrations as your project grows.
+                Automated follow-ups, instant lead routing, and seamless CRM
+                syncing that save your team hours of manual admin every week.
               </p>
             </div>
           </a>
@@ -167,11 +169,11 @@ export default function Home() {
         <section id="cases" className="mt-24">
           <div className="mb-10 flex flex-col gap-2">
             <h2 className="text-2xl font-bold tracking-tight text-black dark:text-white sm:text-3xl">
-              Selected Cases
+              Selected Work
             </h2>
             <p className="max-w-xl text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
-              Explore how we design, engineer, and ship high-performance digital
-              products.
+              Interactive website and AI booking prototypes. Full live demos are
+              launching soon.
             </p>
           </div>
 
@@ -179,23 +181,23 @@ export default function Home() {
             {[
               {
                 href: "#case-1",
-                title: "Demo",
-                category: "Case 01",
+                title: "Client Portal & AI Intake",
+                category: "Demo — Launching Soon",
               },
               {
                 href: "#case-2",
-                title: "Demo",
-                category: "Case 02",
+                title: "B2B Lead Qualification",
+                category: "Demo — Launching Soon",
               },
               {
                 href: "#case-3",
-                title: "Demo",
-                category: "Case 03",
+                title: "Automated Follow-Up",
+                category: "Demo — Launching Soon",
               },
               {
                 href: "#case-4",
-                title: "Demo",
-                category: "Case 04",
+                title: "AI Booking Workflow",
+                category: "Demo — Launching Soon",
               },
             ].map((item) => (
               <a
